@@ -1,3 +1,3 @@
 from django import forms
-class Url(forms.Form):
+class UrlForm(forms.Form):
     url = forms.CharField(label="URL")
