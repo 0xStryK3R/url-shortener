@@ -25,3 +25,7 @@ def urlShort(request):
         'data': data
     }
     return render(request, 'url\index.html', context)
+
+def urlRedirect(request, slugs):
+    data = UrlData.objects.get(slug=slugs)
+    return redirect(data.url)
